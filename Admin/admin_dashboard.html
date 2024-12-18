@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="adminstyles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo" title="Students portal CIT">
+            <img src="cit.jpg" alt="Logo">
+            <h2>Admin Bridge</h2>
+        </div>
+        <!-- Navigation Menu -->
+        <div class="navbar">
+            <a href="admin_dashboard.html" class="active">
+                <span class="material-icons-sharp">dashboard</span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="manage_students.html">
+                <span class="material-icons-sharp">person</span>
+                <h3>Manage Students</h3>
+            </a>
+            <a href="manage_faculty.html">
+                <span class="material-icons-sharp">school</span>
+                <h3>Manage Faculty</h3>
+            </a>
+            <a href="../index.html">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="profile">
+                <div class="top">
+                    <div class="profile-photo">
+                        <img src="profile-admin.jpg" alt="Admin Profile">
+                    </div>
+                    <div class="info">
+                        <p>Hey, <b>Admin</b></p>
+                        <small class="text-muted">ID: 1001</small>
+                    </div>
+                </div>
+                <div class="about">
+                    <h5>Email</h5>
+                    <p>admin@organization.com</p>
+                    <h5>Contact</h5>
+                    <p>+1 123-456-7890</p>
+                    <h5>Address</h5>
+                    <p>123 Admin Street, City</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Dashboard Main Content -->
+        <main>
+            <div class="announcements-section">
+                <h2>Manage Announcements</h2>
+                
+                <!-- Flex container for form and announcement list -->
+                <div class="announcements-container">
+                    <!-- Announcement Form -->
+                    <form id="announcement-form">
+                        <label for="announcement-text">New Announcement:</label>
+                        <textarea id="announcement-text" rows="4" placeholder="Enter announcement here..." required></textarea>
+                        <button type="submit">Post Announcement</button>
+                    </form>
+
+                    <!-- Announcements Display -->
+                    <div class="announcement-list" id="announcement-list">
+                        <!-- Announcements will be dynamically populated here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script -->
+    <script src="manage_announcements.js"></script>
+</body>
+</html>
