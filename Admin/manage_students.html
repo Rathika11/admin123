@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Students</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="adminstyles.css">
+    <link rel="shortcut icon" href="src/cit.jpg" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .admin-action-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            height: calc(100vh - 150px); /* Adjust height to center within viewport */
+        }
+
+        .admin-card {
+            width: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .admin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .admin-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .admin-card button {
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            background-color: #f9f9f9;
+
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .admin-card button:hover {
+            background-color: #d3d3d3;
+        }
+
+        header {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #f5f8fb;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+
+        .navbar a span {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" title="Students portal CIT">
+            <img src="src/cit.jpg" alt="Logo">
+            <h2>Admin Bridge</h2>
+        </div>
+        <div class="navbar">
+            <a href="admin_dashboard.html">
+                <span class="material-icons-sharp">dashboard</span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="manage_students.html" class="active">
+                <span class="material-icons-sharp">person</span>
+                <h3>Manage Students</h3>
+            </a>
+            <a href="manage_faculty.html">
+                <span class="material-icons-sharp">school</span>
+                <h3>Manage Faculty</h3>
+            </a>
+            <a href="../index.html">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </header>
+    <div class="admin-action-container">
+        <button onclick="window.location.href='addstudent.html'">
+            <div class="admin-card">
+            <h3>Add Student</h3>
+            </div></button>
+        
+        <button onclick="window.location.href='updatestu.html'">
+            <div class="admin-card">
+            <h3>Update Student</h3>
+        </div></button>
+        
+        <button onclick="window.location.href='delete_stu.html'">
+            <div class="admin-card">
+            <h3>Delete Student</h3>
+            </div></button>
+        
+    </div>
+</body>
+</html>
